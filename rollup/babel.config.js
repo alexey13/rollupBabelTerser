@@ -24,6 +24,8 @@ const def = [
     ],
     output: {
       file: './dist/app.min.js',
+      format: 'iife',
+      name: 'Wheel'
     }
   }
 ];
