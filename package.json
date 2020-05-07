@@ -5,9 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "build": "npm run rollup:babel",
-    "all": "npm run rollup:all",
-    "rollup:babel": "rollup --config rollup/babel.config.js",
-    "rollup:all": "rollup --config rollup/babel.all.config.js"
+    "rollup:babel": "rollup --config rollup/babel.config.js"
   },
   "author": "Alexey Zhavoronkov",
   "license": "MIT",

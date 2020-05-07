@@ -16,8 +16,15 @@ const def = {
         [
           "@babel/preset-env",
           {
+            modules: false,
             targets: {
-              "browsers": 'defaults, not ie <= 13, not op_mini all, not edge 18, not baidu <= 100, not and_qq <= 100'
+              browsers: [
+                'Chrome >= 60',
+                'Safari >= 10.1',
+                'iOS >= 10.3',
+                'Firefox >= 54',
+                'Edge >= 15',
+              ]
             },
             "useBuiltIns": "usage",
             corejs: '3.6'
@@ -34,28 +41,5 @@ const def = {
     format: 'iife',
   }
 };
-
-/*const pluginsFiles = {
-  randomLetters: './src/randomLetters.js',
-  imagesPlayer: './src/imagesPlayer.js',
-  scrollContainer: './src/scrollContainer.js',
-  charming: './src/charming.js',
-  slider: './src/slider.js'
-};
-
-const rollupEach = Object.keys(pluginsFiles).map(name => {
-  return {
-    input: pluginsFiles[name],
-    plugins: [
-      babel({presets: ['@babel/preset-env']}),
-      terser()
-    ],
-    output: {
-      file: `./dist/animejsPlugins-${name}.js`,
-      format: 'iife',
-      name: `animejsPlugins`
-    }
-  }
-});*/
 
 export default def;
